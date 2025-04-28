@@ -100,6 +100,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "wdd430-project:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wdd430-project:serve:production"
+            }
+          }
         }
       }
     }
