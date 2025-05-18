@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wdd430-project": {
+    "fresh-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wdd430-project",
+            "outputPath": "dist/fresh-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wdd430-project:build:production"
+              "buildTarget": "fresh-app:build:production"
             },
             "development": {
-              "buildTarget": "wdd430-project:build:development"
+              "buildTarget": "fresh-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -96,21 +96,9 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
-          }
-        },
-        "e2e": {
-          "builder": "playwright-ng-schematics:playwright",
-          "options": {
-            "devServerTarget": "wdd430-project:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "wdd430-project:serve:production"
-            }
           }
         }
       }
